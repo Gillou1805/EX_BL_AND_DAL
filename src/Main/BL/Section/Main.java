@@ -16,6 +16,9 @@ public class Main {
         DAOStatus daoStatus = new DAOStatus();
         DAOPersonne daoPersonne = new DAOPersonne();
         DAOCoursPersonne daoCoursPersonne = new DAOCoursPersonne();
+        
+        //Le main permet de créer la DB Test, d'y insérer les différentes tables avec les différentes relations, de tester les méthodes
+        // et de pouvoir vérifier les différentes valeurs rentrées dans celles-ci.
           
         
      // Créations des tables
