@@ -23,7 +23,7 @@ public class DAOStatus implements IDAOStatus {
     }
 
     // Méthode pour ajouter un statut
-    @Override
+    
     public void addStatus(String status) {
         String sql = "INSERT INTO Status (status) VALUES (?)";
         try (PreparedStatement insertStatus = connexion.prepareStatement(sql)) {
@@ -35,7 +35,7 @@ public class DAOStatus implements IDAOStatus {
     }
 
     // Méthode pour mettre à jour un statut
-    @Override
+    
     public void updateStatus(int id, String status) {
         String sql = "UPDATE Status SET status=? WHERE id=?";
         try (PreparedStatement updateStatus = connexion.prepareStatement(sql)) {
@@ -48,7 +48,7 @@ public class DAOStatus implements IDAOStatus {
     }
 
     // Méthode pour supprimer un statut
-    @Override
+    
     public void deleteStatus(int id) {
         String sql = "DELETE FROM Status WHERE id=?";
         try (PreparedStatement deleteStatus = connexion.prepareStatement(sql)) {
@@ -60,7 +60,6 @@ public class DAOStatus implements IDAOStatus {
     }
 
     // Méthode pour récupérer l'ID d'un statut via son nom
-    @Override
     public int getIDStatus(String status) {
         String sql = "SELECT id FROM Status WHERE status=?";
         int id = -1;
@@ -121,8 +120,7 @@ public class DAOStatus implements IDAOStatus {
         return liste;
     }
 
-    // Méthode pour récupérer tous les statuts
-    @Override
+    
     public ArrayList<Status> getStatus() {
         ArrayList<Status> liste = new ArrayList<>();
         Statement requete = null;

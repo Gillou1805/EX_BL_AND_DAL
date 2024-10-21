@@ -96,7 +96,6 @@ public class DAOSection implements IDAOSection{
             connexion = DriverManager.getConnection("jdbc:postgresql://localhost/test", "postgres", "Test01");
             requete = connexion.createStatement();
             
-            // Exécuter la requête pour récupérer les noms des sections
             set = requete.executeQuery("SELECT nom FROM Section");
             
             // Parcourir les résultats et ajouter chaque section à la liste
@@ -106,7 +105,6 @@ public class DAOSection implements IDAOSection{
                 liste.add(section);
             }
 
-            // Optionnel : imprimer les sections récupérées pour débogage
             for (Section section : liste) {
                 System.out.println("Section: " + section.getNom());
             }
@@ -129,7 +127,6 @@ public class DAOSection implements IDAOSection{
                     ex.printStackTrace();
                 }
             }
-            // Optionnel : Fermer la connexion si vous ne prévoyez pas de l'utiliser à nouveau
             // closeConnection();
         }
         return liste;

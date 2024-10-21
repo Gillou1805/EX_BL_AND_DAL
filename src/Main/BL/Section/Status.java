@@ -3,9 +3,9 @@ package Main.BL.Section;
 
 public class Status {
     private int id;         // ID du statut
-    private String status;  // Description du statut
+    private String status;  
 
-    // Constructeur
+    
     public Status(int id, String status) {
         this.id = id;
         this.status = status;

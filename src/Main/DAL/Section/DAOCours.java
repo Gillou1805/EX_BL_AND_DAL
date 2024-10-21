@@ -23,7 +23,7 @@ public class DAOCours implements IDAOCours {
         }
     }
 
-    // Méthode pour ajouter un cours avec id_Section (clé étrangère)
+    // ajouter un cours avec id_Section (clé étrangère)
     public void addCours(String nom, int id_Section) {
         String sql = "INSERT INTO Cours (nom, id_Section) VALUES (?, ?)";
         try (PreparedStatement insertCours = connexion.prepareStatement(sql)) {
@@ -132,20 +132,18 @@ public class DAOCours implements IDAOCours {
                     ex.printStackTrace();
                 }
             }
-            // Optionnel : Fermer la connexion si vous ne prévoyez pas de l'utiliser à nouveau
-            // closeConnection();
+            
         }
         return liste;
     }
 
-    // Méthode pour récupérer la liste des cours
     public ArrayList<Cours> getCours() {
         ArrayList<Cours> liste = new ArrayList<>();
         Statement requete = null;
         ResultSet set = null;
 
         try {
-            // Établir la connexion à la base de données
+            // Établir la connexion à la base de données test
             connexion = DriverManager.getConnection("jdbc:postgresql://localhost/test", "postgres", "Test01");
             requete = connexion.createStatement();
 

@@ -6,7 +6,6 @@ import Main.BL.Section.Section;
 
 public interface IDAOSection {
     
-    // Méthode pour récupérer toutes les sections
     ArrayList<Section> getSections();
     
     // Méthode pour récupérer l'ID d'une section à partir de son nom
